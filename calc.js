@@ -26,8 +26,11 @@ function clean() {
     //if there is a syntax error, toggle the variable to false (reset)
     SyntaxError = false
     //clear the display value 
-    display.value = "0";
-
+    if (display != null){
+        display.value = "0";
+    }
+    
+    return 0;
 }
 
 function equal() {
@@ -145,4 +148,4 @@ function calculate(event) {
     
 }
 
-
+module.exports = clean;
